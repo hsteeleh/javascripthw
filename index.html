@@ -1,1 +1,87 @@
 
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psyhchic Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1> The Psychic Game</h1>
+
+    <p>Guess what letter I am thinking of?   <span id="user-guess">_____ </span></p>
+    
+    
+    <p> Wins: </p>
+    <p> Losses:</p>
+    <p> Guesses Left:</p>
+    <p> Your Guesses so far:</p>
+
+
+    <!-- JavaScript it here-->
+    <script type="text/javascript">
+        var userKey=document.getElementById("user-guess");
+        var userGuesses=[];
+        document.onkeyup=function(event){
+            userKey.textContent=event.key; 
+            console.log(event.key);
+            userGuesses.push(event.key);
+            console.log(userGuesses);
+        };
+        
+        
+       
+//var computerChoices = ["a", "b", "c", "d", "e" "f","g", "h", "i", "j", "k", "l", "m", "n", "o" "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+//  ===  !==   if else statements and 2 diff funtions  adding points and subtracting pts
+// google ++,--
+//computer chooses random letter
+//
+//google math.floor  for randomization
+// look at the computer letter, store it, compare it with user event.key
+//write user guesses array to HTML (after comparing it, compare before writing)
+//
+//
+//
+//variables vs array,  method vs function, do you need to carry things through with you, think in tiny pieces
+//
+
+    //10 guesses?
+    //for (var i=0; i<10; i++)
+
+    
+
+
+    
+        //if (user-guess===computer-guess){
+
+       // }
+        //If statement- if user guess= computer guess
+        //
+
+        // Randomly chooses a choice from the options array. This is the Computer's guess.
+        //var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        // Alerts the key the user pressed (userGuess).
+        //alert("User guess: " + userGuess);
+
+        // Alerts the Computer's guess.
+        //alert("Computer guess: " + computerGuess);
+
+     //   };
+    </script>
+
+
+</body>
+</html>
+
+<!--Pseudo Code
+    User needs to enter letter
+    Letter needs to be saved
+    Computer needs to guess a letter
+    if the user = the computer , user wins
+    if the user does = computer, user loses
+    keep track of guesses thus far
+    limit number of guesses
