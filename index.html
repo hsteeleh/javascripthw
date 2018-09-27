@@ -11,15 +11,15 @@
 <body>
     <h1> The Psychic Game</h1>
 
-    <p>Guess what letter I am thinking of?   <span id="user-guess">_____ </span></p>
+    <p>Guess what letter I am thinking of?   <span id="user-guess">_</span></p>
     
     
-    <p> Wins: </p>
+    <p> Wins: <div id="wins"></div></p>
     <p> Losses:</p>
     <p> Guesses Left:</p>
     <p> Your Guesses so far:</p>
-    <p>Wins:</p>
-    <div id="wins"></div>
+    
+    
 
     <!-- JavaScript it here-->
     <script type="text/javascript">
@@ -38,13 +38,15 @@
                 wins++
                 document.querySelector("#wins").innerHTML = wins
             }
-           
+           else !== (letterToGuess);
+            losses++
+            document.querySelector("#losses").innerHTML = Losses
             
         };
         
         
        
-    var computerChoices = ["a", "b", "c", "d", "e""f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"];
+    var computerChoices = ["a", "b", "c", "d", "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"];
     var letterToGuess = null
 
     function updateLetterToGuess (){
@@ -53,6 +55,7 @@
 
     updateLetterToGuess();
    console.log("letter" , letterToGuess);
+
 
 
 
