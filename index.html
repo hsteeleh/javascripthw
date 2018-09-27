@@ -1,4 +1,3 @@
-
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
@@ -19,26 +18,51 @@
     <p> Losses:</p>
     <p> Guesses Left:</p>
     <p> Your Guesses so far:</p>
-
+    <p>Wins:</p>
+    <div id="wins"></div>
 
     <!-- JavaScript it here-->
     <script type="text/javascript">
-        var userKey=document.getElementById("user-guess");
-        var userGuesses=[];
-        document.onkeyup=function(event){
-            userKey.textContent=event.key; 
-            console.log(event.key);
-            userGuesses.push(event.key);
-            console.log(userGuesses);
+        var userKey = document.getElementById("user-guess");
+        var userGuesses = [];
+        var guessesLeft = 9
+        var wins = 0
+        var losses = 0
+
+        document.onkeyup = function(event){
+            guessesLeft--
+
+            var letter = event.key
+            userGuesses.push(letter);
+            if (letter === letterToGuess) {
+                wins++
+                document.querySelector("#wins").innerHTML = wins
+            }
+           
+            
         };
         
         
        
-//var computerChoices = ["a", "b", "c", "d", "e" "f","g", "h", "i", "j", "k", "l", "m", "n", "o" "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var computerChoices = ["a", "b", "c", "d", "e"];
+    var letterToGuess = null
+
+    function updateLetterToGuess (){
+        letterToGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    }
+
+    updateLetterToGuess();
+   console.log("letter" , letterToGuess);
+
+
+
+
+
+//Computer guesses when used guesses
 //  ===  !==   if else statements and 2 diff funtions  adding points and subtracting pts
 // google ++,--
 //computer chooses random letter
-//
+//letter only? if/else?
 //google math.floor  for randomization
 // look at the computer letter, store it, compare it with user event.key
 //write user guesses array to HTML (after comparing it, compare before writing)
